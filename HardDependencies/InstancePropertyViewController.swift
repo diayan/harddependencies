@@ -9,14 +9,15 @@ import UIKit
 
 class InstancePropertyViewController: UIViewController {
 
+    //using property injection for dependency injection
+    lazy var analytics = Analytics.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        Analytics.shared.track(event: "viewDidAppear - \(type(of: self))")
+        analytics.track(event: "viewDidAppear - \(type(of: self))")
     }
 }
