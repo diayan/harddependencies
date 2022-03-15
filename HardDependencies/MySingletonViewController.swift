@@ -7,8 +7,7 @@
 
 import UIKit
 
-class MySingletonViewController: UIViewController {
-
+class MySingletonViewController: UIViewController {    
     override func viewDidLoad() {
         super.viewDidLoad()
 
